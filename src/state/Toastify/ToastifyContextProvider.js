@@ -1,5 +1,5 @@
 import { createContext, useReducer } from 'react';
-import Toastify from '../../components/Toastify';
+import Toastify from '../../components/Toast/Toastify';
 import ToastifyReducer from './ToastifyReducer';
 
 export const ToastifyContext = createContext()

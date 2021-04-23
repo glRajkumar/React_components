@@ -1,3 +1,20 @@
+.toast-app {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toast-app>* {
+    margin: 0 .2rem;
+}
+
+.toast-app h1 {
+    margin-bottom: 1rem;
+}
+
+.toast-app input {
+    padding: .3rem;
+}
+
 .toastify-wrapper {
     position: fixed;
     top: 10px;
@@ -6,7 +23,7 @@
 }
 
 .toastify-item {
-    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -19,7 +36,6 @@
     0% {
         margin-left: 120%;
     }
-
     100% {
         margin-left: 0;
     }
@@ -29,7 +45,6 @@
     0% {
         margin-left: 0;
     }
-
     100% {
         margin-left: 120%;
     }
