@@ -34,6 +34,7 @@ function Toastify({ toast, dispatch }) {
         if (width === 100) {
             handleCloseNotification()
         }
+        // eslint-disable-next-line
     }, [width])
 
     useEffect(() => {

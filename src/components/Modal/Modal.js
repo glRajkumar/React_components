@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useState } from "react";
 import ReactDOM from "react-dom";
 
 const Modal = forwardRef((props, ref) => {
-    const [display, setDisplay] = useState(false);
+    const [display, setDisplay] = useState(false)
 
     useImperativeHandle(ref, () => ({ toggleModal }))
 
@@ -20,7 +20,7 @@ const Modal = forwardRef((props, ref) => {
         )
     }
 
-    return null;
-});
+    return null
+})
 
 export default Modal
