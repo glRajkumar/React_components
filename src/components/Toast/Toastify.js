@@ -5,6 +5,17 @@ function Toastify({ toast, dispatch }) {
     const [width, setWidth] = useState(0);
     const [intervalID, setIntervalID] = useState(null);
 
+    useEffect(() => {
+        if (width === 100) {
+            handleCloseNotification()
+        }
+        // eslint-disable-next-line
+    }, [width])
+
+    useEffect(() => {
+        handleStartTimer()
+    }, [])
+
     const handleStartTimer = () => {
         const id = setInterval(() => {
             setWidth(prev => {
@@ -29,17 +40,6 @@ function Toastify({ toast, dispatch }) {
             dispatch({ type: "REMOVE", payload: toast.id })
         }, 400)
     }
-
-    useEffect(() => {
-        if (width === 100) {
-            handleCloseNotification()
-        }
-        // eslint-disable-next-line
-    }, [width])
-
-    useEffect(() => {
-        handleStartTimer()
-    }, [])
 
     return (
         <div

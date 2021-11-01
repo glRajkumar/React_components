@@ -7,7 +7,8 @@
     margin-bottom: 1rem;
 }
 
-.modal-wrapper, .modal-backdrop {
+.modal-wrapper,
+.modal-backdrop {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -32,4 +33,51 @@
     width: 60%;
     left: 50%;
     top: 50%;
+}
+
+
+/* Modal 2 */
+#root-modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.main-modal-cont {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.modal-close-ic:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.micromini {
+    width: 400px;
+}
+
+.micro {
+    width: 30vw;
+}
+
+.mini {
+    width: 40vw;
+}
+
+.small {
+    width: 50vw;
+}
+
+.medium {
+    width: 70vw;
+}
+
+.large {
+    width: 80vw;
 }

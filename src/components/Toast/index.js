@@ -7,7 +7,8 @@ function Toast() {
     const dispatch = useContext(ToastifyContext)
     const [msg, setMsg] = useState("")
 
-    const add = (type) => {
+    const add = type => {
+        if (!msg) return;
         const id = shortid.generate()
 
         dispatch({

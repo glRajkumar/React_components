@@ -1,0 +1,15 @@
+.df,
+.dc,
+.df-sb {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.df-sb {
+  justify-content: space-between;
+}
+
+.dc {
+  justify-content: center;
+}

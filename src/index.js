@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import ToastifyContextProvider from './state/Toastify/ToastifyContextProvider';
+import './css/common.css';
 import App from './App';
 
 ReactDOM.render(
