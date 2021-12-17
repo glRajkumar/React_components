@@ -47,7 +47,7 @@ function Toastify({ toast, dispatch }) {
             onMouseLeave={handleStartTimer}
             className={`toastify-item ${toast.type === "success" ? "success" : "error"} ${exit ? "exit" : ""}`}
         >
-            <p>{toast.msg}</p>
+            <div>{toast.msg}</div>
             <div className={"bar"} style={{ width: `${width}%` }}></div>
         </div>
     )

@@ -1,12 +1,3 @@
-.modal-app {
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.modal-app h1 {
-    margin-bottom: 1rem;
-}
-
 .modal-wrapper,
 .modal-backdrop {
     position: fixed;

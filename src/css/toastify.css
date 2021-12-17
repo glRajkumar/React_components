@@ -1,16 +1,3 @@
-.toast-app {
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.toast-app>* {
-    margin: 0 .2rem;
-}
-
-.toast-app h1 {
-    margin-bottom: 1rem;
-}
-
 .toast-app input {
     padding: .3rem;
 }
@@ -36,6 +23,7 @@
     0% {
         margin-left: 120%;
     }
+
     100% {
         margin-left: 0;
     }
@@ -45,6 +33,7 @@
     0% {
         margin-left: 0;
     }
+
     100% {
         margin-left: 120%;
     }

@@ -18,13 +18,15 @@ function Toast() {
     }
 
     return (
-        <div className="toast-app">
+        <div className="df p-16 toast-app">
             <h1>Toast</h1>
+
             <input
                 type="text"
                 value={msg}
                 onChange={e => setMsg(e.target.value)}
             />
+
             <button onClick={() => add("success")}>Add as Success</button>
             <button onClick={() => add("error")}>Add as Error</button>
         </div>

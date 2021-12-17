@@ -13,3 +13,19 @@
 .dc {
   justify-content: center;
 }
+
+.gap1 {
+  gap: 1rem;
+}
+
+.p-16 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: .5rem;
+}
+
+.mb-16 {
+  margin-bottom: 1rem;
+}
