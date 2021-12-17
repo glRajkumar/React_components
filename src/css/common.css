@@ -1,3 +1,11 @@
+:root {
+  --bg-body: hsl(213, 85%, 97%);
+  --bg-main: hsl(0, 0%, 99%);
+  --bg-second: hsl(250, 5%, 77%);
+  --color-hover: hsl(218, 29%, 85%);
+  --color-txt: #151426;
+}
+
 .df,
 .dc,
 .df-sb {
@@ -38,6 +46,10 @@
   transform: rotateZ(270deg);
 }
 
-.cp{
+.cp {
   cursor: pointer;
+}
+
+.pr {
+  position: relative;
 }

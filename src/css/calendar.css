@@ -1,11 +1,3 @@
-:root {
-    --bg-body: #f3f8fe;
-    --bg-main: #fdfdfd;
-    --bg-second: #c3c2c8;
-    --color-hover: hsl(218, 29%, 85%);
-    --color-txt: #151426;
-}
-
 .calendar {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: var(--bg-main);
@@ -64,10 +56,14 @@
     padding: 5px 10px;
 }
 
-.calendar-day:hover:not(.active),
+.calendar-day:hover:not(.active, .no-hv),
 .month-picker:hover,
 .month-list div:hover {
     background-color: var(--color-hover);
+}
+
+.no-hv {
+    cursor: default;
 }
 
 .month-list {

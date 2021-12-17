@@ -38,8 +38,10 @@ function Calendar() {
   }
 
   const updateActive = (index, day) => {
-    console.log(new Date(year, month, day))
-    setActive(index)
+    if (day !== 0) {
+      console.log(new Date(year, month, day))
+      setActive(index)
+    }
   }
 
   return (
@@ -67,7 +69,7 @@ function Calendar() {
             days.map((day, i) => (
               <div
                 key={i}
-                className={`dc calendar-day cp ${active === i ? "active" : ""}`}
+                className={`dc calendar-day cp ${day === 0 ? "no-hv" : ""} ${active === i ? "active" : ""}`}
                 onClick={() => updateActive(i, day)}
               >
                 {day > 0 ? day : ""}
