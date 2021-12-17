@@ -29,3 +29,15 @@
 .mb-16 {
   margin-bottom: 1rem;
 }
+
+.rotateZ90 {
+  transform: rotateZ(90deg);
+}
+
+.rotateZ270 {
+  transform: rotateZ(270deg);
+}
+
+.cp{
+  cursor: pointer;
+}

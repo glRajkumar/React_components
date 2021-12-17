@@ -1,0 +1,108 @@
+:root {
+    --bg-body: #f3f8fe;
+    --bg-main: #fdfdfd;
+    --bg-second: #c3c2c8;
+    --color-hover: hsl(218, 29%, 85%);
+    --color-txt: #151426;
+}
+
+.calendar {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: var(--bg-main);
+    border-radius: 30px;
+    height: max-content;
+    width: max-content;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.calendar-header {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--color-txt);
+}
+
+.calendar-week-day {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+}
+
+.calendar-week-day div {
+    display: grid;
+    place-items: center;
+    color: var(--bg-second);
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    color: var(--color-txt);
+}
+
+.calendar-day {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    position: relative;
+    animation: to-top 1s forwards;
+    border-radius: 50%;
+}
+
+.calendar-day.active {
+    background-color: var(--color-txt);
+    color: var(--bg-body);
+    transition: .15s ease-out;
+}
+
+.month-picker {
+    border-radius: 10px;
+    margin-right: auto;
+    padding: 5px 10px;
+}
+
+.calendar-day:hover:not(.active),
+.month-picker:hover,
+.month-list div:hover {
+    background-color: var(--color-hover);
+}
+
+.month-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-main);
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    transform: scale(1.5);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.month-list.show {
+    background-color: white;
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: visible;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes to-top {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
