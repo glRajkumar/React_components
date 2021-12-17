@@ -1,20 +1,13 @@
 import { useContext, useState } from 'react'
 import { ToastifyContext } from '../../state/Toastify/ToastifyContextProvider'
-import shortid from "shortid";
-import "../../css/toastify.css";
 
 function Toast() {
-    const dispatch = useContext(ToastifyContext)
+    const { add } = useContext(ToastifyContext)
     const [msg, setMsg] = useState("")
 
-    const add = type => {
+    const addMsg = type => {
         if (!msg) return;
-        const id = shortid.generate()
-
-        dispatch({
-            type: "ADD",
-            payload: { id, msg, type }
-        })
+        add(msg, type)
     }
 
     return (
@@ -27,8 +20,8 @@ function Toast() {
                 onChange={e => setMsg(e.target.value)}
             />
 
-            <button onClick={() => add("success")}>Add as Success</button>
-            <button onClick={() => add("error")}>Add as Error</button>
+            <button onClick={() => addMsg("success")}>Add as Success</button>
+            <button onClick={() => addMsg("error")}>Add as Error</button>
         </div>
     )
 }

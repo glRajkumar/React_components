@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { ReactComponent as Cancel } from "../../svg/cancel.svg";
+import "../../css/toastify.css";
 
 function Toastify({ toast, dispatch }) {
     const [exit, setExit] = useState(false);
@@ -47,7 +49,10 @@ function Toastify({ toast, dispatch }) {
             onMouseLeave={handleStartTimer}
             className={`toastify-item ${toast.type === "success" ? "success" : "error"} ${exit ? "exit" : ""}`}
         >
-            <div>{toast.msg}</div>
+            <div className='df-sb p-8'>
+                {toast.msg}
+                <Cancel className="cp" onClick={handleCloseNotification} />
+            </div>
             <div className={"bar"} style={{ width: `${width}%` }}></div>
         </div>
     )
