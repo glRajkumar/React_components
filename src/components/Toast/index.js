@@ -19,7 +19,7 @@ function Toast() {
 
     return (
         <div className="toast-app">
-            <h1>Toast app</h1>
+            <h1>Toast</h1>
             <input
                 type="text"
                 value={msg}
