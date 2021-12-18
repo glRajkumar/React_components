@@ -26,6 +26,10 @@
   gap: 1rem;
 }
 
+.align-start {
+  justify-content: flex-start;
+}
+
 .p-16 {
   padding: 1rem;
 }

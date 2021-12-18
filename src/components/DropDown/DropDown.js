@@ -23,8 +23,16 @@ function Dropdown({ Parent, className = "", children, data, position = "", onCli
     return setIsOpen(prev => !prev)
   }
 
+  function onDDClick(e, val) {
+    if (val.hasChild) {
+      e.stopPropagation()
+      return
+    }
+    onClick(typeof val === "string" ? val : val.key)
+  }
+
   return (
-    <div ref={wrapperRef} className={`dc pr cp ${className}`} onClick={handleClick}>
+    <div ref={wrapperRef} className={`pr cp ${className}`} onClick={handleClick}>
       {Parent}
 
       {
@@ -37,9 +45,15 @@ function Dropdown({ Parent, className = "", children, data, position = "", onCli
               <div
                 key={typeof val === "string" ? val : val.key}
                 className="p-8 dropdown-hv"
-                onClick={() => onClick(typeof val === "string" ? val : val.key)}
+                onClick={e => onDDClick(e, val)}
               >
-                {typeof val === "string" ? val : val.Comp}
+                {
+                  typeof val === "string"
+                    ? val
+                    : val.hasChild
+                      ? <Dropdown Parent={val.Comp} {...val.childProps} onClick={onClick} />
+                      : val.Comp
+                }
               </div>
             ))
           }

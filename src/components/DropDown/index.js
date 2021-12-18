@@ -10,8 +10,53 @@ const data2 = [
   "Title3"
 ]
 
+const data4 = [
+  "Title1",
+  "Title2",
+  {
+    key: "Title3",
+    Comp: "Title3",
+    hasChild: true,
+    childProps: {
+      data: [
+        ...data2,
+        {
+          key: "Title4",
+          Comp: "Title4",
+          hasChild: true,
+          childProps: {
+            data: [
+              "Child 2-1", "Child 2-2", "Child 2-3",
+              {
+                key: "Child 2-4",
+                Comp: <div className='df'><Arrow /> Child 2-4</div>,
+                hasChild: true,
+                childProps: {
+                  data: ["Child 2-4-1", "Child 2-4-2", "Child 2-4-3"],
+                  position: "right"
+                }
+              }
+            ],
+            position: "left"
+          }
+        },
+        {
+          key: "Title5",
+          Comp: "Title5",
+          hasChild: true,
+          childProps: {
+            data: ["Child 3-1", "Child 3-2", "Child 3-3"],
+            position: "top"
+          }
+        }
+      ],
+      position: "right"
+    }
+  },
+]
+
 function Parent({ title }) {
-  return <div>{title}</div>
+  return <div className='df'><Arrow /> {title}</div>
 }
 
 function DDCont() {
@@ -24,7 +69,7 @@ function DDCont() {
           <Dropdown
             data={data1}
             position='right'
-            Parent={<Parent title="DropDown 1" />}
+            Parent="DropDown 1"
             onClick={val => console.log(val)}
           />
         </div>
@@ -41,9 +86,17 @@ function DDCont() {
           <Dropdown
             Parent={<Parent title="DropDown 3" />}
           >
-            <p>Hi i am the first</p>
-            <p>Hi i am the second</p>
+            <p className='p-8'>Hi i am the first</p>
+            <p className='p-8'>Hi i am the second</p>
           </Dropdown>
+        </div>
+
+        <div>
+          <Dropdown
+            data={data4}
+            Parent="DropDown 4"
+            onClick={val => console.log(val)}
+          />
         </div>
       </div>
     </div>

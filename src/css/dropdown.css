@@ -32,6 +32,26 @@
   background-color: var(--color-hover);
 }
 
+.dropdown-list .dropdown-list {
+  top: calc(100% + 10px);
+  right: -8px;
+}
+
+.dropdown-list .right {
+  left: calc(100% + 10px);
+  top: -8px;
+}
+
+.dropdown-list .left {
+  right: calc(100% + 10px);
+  top: -8px;
+}
+
+.dropdown-list .top {
+  bottom: calc(100% + 10px);
+  top: initial;
+}
+
 @keyframes scaleDrop {
   0% {
     opacity: 0;

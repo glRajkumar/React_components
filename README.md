@@ -41,11 +41,21 @@ add("message", "success")
 ## 4) DropDown
 -> this component can work with just children or data as prop.
 -> props
-  * Parent (Component)
-  * ?data (array of strings/Components)
+  * Parent (Component | string)
+  * ?data (array of strings | Components)
   * ?className = ""
   * ?position = "" (right | left | top)
   * ?onClick
+-> nested drop down can be done by passing following type of object
+
+```js
+{
+  key: "",
+  Comp: "",
+  hasChild: true, // optional
+  childProps: {} // optional - dropdown props
+}
+```
 
 
 ## 5) Calendar
