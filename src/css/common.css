@@ -38,6 +38,10 @@
   margin-bottom: 1rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .rotateZ90 {
   transform: rotateZ(90deg);
 }

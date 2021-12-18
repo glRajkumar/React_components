@@ -36,6 +36,15 @@ function DDCont() {
             onClick={val => console.log(val)}
           />
         </div>
+
+        <div>
+          <Dropdown
+            Parent={<Parent title="DropDown 3" />}
+          >
+            <p>Hi i am the first</p>
+            <p>Hi i am the second</p>
+          </Dropdown>
+        </div>
       </div>
     </div>
   )

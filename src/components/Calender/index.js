@@ -6,7 +6,9 @@ function CalContainer() {
     <div className='p-16'>
       <h1>Calendar</h1>
 
-      <Calendar />
+      <Calendar
+        onDayClick={date => console.log(date)}
+      />
     </div>
   )
 }
